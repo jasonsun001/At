@@ -1,0 +1,43 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'AuraTransferFX2.jnlp'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedAuraTransferFX2_id() {
+        dtjava.embed(
+            {
+                id : 'AuraTransferFX2_id',
+                url : 'AuraTransferFX2.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '550',
+                height : '350'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedAuraTransferFX2_id);
+</script>
+
+</head><body>
+<h2>Test page for <b>AuraTransferFX2_Win</b></h2>
+  <b>Webstart:</b> <a href='AuraTransferFX2.jnlp' onclick="return launchApplication('AuraTransferFX2.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>
